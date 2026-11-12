@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UK Visitor Visa: Document To-Do (Juzar & Sherebanu Merchant)</title>
+<style>
+  :root { --bg:#FBF7F0; --ink:#1F2A44; --line:#1F2A44; --mint:#9CC9A8; --butter:#F6E3A1; --peach:#F7C9B0; --lav:#CFC3EE; --sky:#BFDDF2; --muted:#5d6577; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 -apple-system, "Segoe UI", Inter, Arial, sans-serif; }
+  main { max-width:820px; margin:0 auto; padding:32px 20px 80px; }
+  h1 { font-size:30px; line-height:1.2; margin:0 0 6px; }
+  .sub { color:var(--muted); margin:0 0 18px; }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:22px; }
+  .chip { border:2px solid var(--line); border-radius:999px; padding:3px 12px; font-size:13px; background:#fff; }
+  .bar { position:sticky; top:0; z-index:5; background:var(--bg); padding:10px 0 14px; }
+  .track { height:14px; border:2px solid var(--line); border-radius:999px; background:#fff; overflow:hidden; }
+  .fill { height:100%; width:0; background:var(--mint); transition:width .25s; }
+  .barrow { display:flex; justify-content:space-between; align-items:center; font-size:14px; margin-bottom:6px; }
+  button { font:inherit; font-size:13px; border:2px solid var(--line); background:#fff; border-radius:8px; padding:3px 10px; cursor:pointer; margin-left:6px; }
+  section { border:2px solid var(--line); border-radius:14px; background:#fff; box-shadow:5px 5px 0 var(--line); margin:0 0 26px; overflow:hidden; }
+  section > header { padding:12px 16px; border-bottom:2px solid var(--line); }
+  section h2 { font-size:18px; margin:0; }
+  section header p { margin:2px 0 0; font-size:13px; color:var(--ink); opacity:.8; }
+  .c1 header{background:var(--peach)} .c2 header{background:var(--butter)} .c3 header{background:var(--sky)} .c4 header{background:var(--mint)} .c5 header{background:var(--lav)}
+  ul { list-style:none; margin:0; padding:6px 16px 10px; }
+  li { border-bottom:1px dashed #cfd3dc; }
+  li:last-child { border-bottom:0; }
+  label { display:flex; gap:12px; padding:10px 0; cursor:pointer; align-items:flex-start; }
+  input[type=checkbox] { width:20px; height:20px; margin-top:2px; accent-color:var(--ink); flex:none; }
+  .t { font-weight:600; }
+  .d { display:block; font-size:14px; color:var(--muted); font-weight:400; }
+  .who { display:inline-block; font-size:11px; border:1.5px solid var(--line); border-radius:6px; padding:0 6px; margin-left:6px; vertical-align:2px; background:var(--bg); font-weight:600; }
+  input:checked ~ span .t { text-decoration:line-through; opacity:.55; }
+  .no ul { padding:12px 16px 14px 34px; list-style:disc; columns:2; font-size:14px; }
+  .no li { border:0; padding:2px 0; }
+  .no header { background:#fff; }
+  footer { font-size:13px; color:var(--muted); }
+  a { color:var(--ink); }
+
+  .built { display:inline-block; font-size:13px; font-weight:600; border:2px solid var(--line); border-radius:999px; padding:3px 12px; background:var(--butter); transform:rotate(-2deg); margin-bottom:14px; box-shadow:3px 3px 0 var(--line); }
+  .heart { color:#D9533B; display:inline-block; animation:beat 1.2s infinite; }
+  .plane { display:inline-block; animation:fly 3s ease-in-out infinite; }
+  #cheer { font-weight:600; }
+  .chip { transition:transform .15s; } .chip:nth-child(odd){transform:rotate(-1.5deg)} .chip:nth-child(even){transform:rotate(1.5deg)} .chip:hover{transform:rotate(0) scale(1.06)}
+  section { animation:rise .5s both; transition:transform .15s, box-shadow .15s; }
+  section:hover { transform:translate(-2px,-2px); box-shadow:7px 7px 0 var(--line); }
+  section:nth-of-type(2){animation-delay:.07s} section:nth-of-type(3){animation-delay:.14s} section:nth-of-type(4){animation-delay:.21s} section:nth-of-type(5){animation-delay:.28s} section:nth-of-type(6){animation-delay:.35s}
+  input[type=checkbox] { transition:transform .15s; } label:hover input { transform:scale(1.15) rotate(-6deg); }
+  input:checked { animation:pop .35s; }
+  section.done > header h2::after { content:" ✓"; }
+  section.done { animation:wiggle .5s; }
+  .bit { position:fixed; width:9px; height:9px; border-radius:2px; pointer-events:none; z-index:99; }
+  @keyframes beat { 0%,100%{transform:scale(1)} 50%{transform:scale(1.3)} }
+  @keyframes fly { 0%,100%{transform:translate(0,0) rotate(0)} 50%{transform:translate(8px,-6px) rotate(-10deg)} }
+  @keyframes rise { from{opacity:0; transform:translateY(18px)} to{opacity:1; transform:none} }
+  @keyframes pop { 0%{transform:scale(1)} 50%{transform:scale(1.5) rotate(10deg)} 100%{transform:scale(1)} }
+  @keyframes wiggle { 0%,100%{transform:rotate(0)} 25%{transform:rotate(-1deg)} 75%{transform:rotate(1deg)} }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation:none !important; transition:none !important; } }
+  @media (max-width:560px){ .no ul{columns:1} }
+  @media print { .bar button{display:none} section{box-shadow:none; break-inside:avoid} .bar{position:static} }
+</style>
+</head>
+<body>
+<main>
+  <div class="built">Built by Insiyah &amp; Aliasgar <span class="heart">♥</span></div>
+  <h1>UK Visitor Visa: Document To-Do <span class="plane">✈️</span></h1>
+  <p class="sub">Applicants: Juzar Merchant and Sherebanu Merchant, applying from India. Tick each item once the scan is ready to upload.</p>
+  <div class="chips">
+    <span class="chip">Employed (salaried)</span>
+    <span class="chip">Staying with son/daughter in the UK</span>
+    <span class="chip">Sponsor is on a UK visa</span>
+    <span class="chip">Funds: own + sponsor</span>
+    <span class="chip">Traveling together</span>
+  </div>
+
+  <div class="bar">
+    <div class="barrow"><span><span id="count">0 of 0 done</span> <span id="cheer"></span></span><span><button onclick="window.print()">Print</button><button id="reset">Reset</button></span></div>
+    <div class="track"><div class="fill" id="fill"></div></div>
+  </div>
+
+  <section class="c1">
+    <header><h2>1. Passport (mandatory)</h2><p>The only document the form marks as mandatory.</p></header>
+    <ul>
+      <li><label><input type="checkbox" id="a1"><span><span class="t">Juzar's current passport<span class="who">Juzar</span></span><span class="d">Valid for the whole trip.</span></span></label></li>
+      <li><label><input type="checkbox" id="a2"><span><span class="t">Sherebanu's current passport<span class="who">Sherebanu</span></span><span class="d">She needs her own application. Shared documents do not need to be duplicated when you apply together.</span></span></label></li>
+      <li><label><input type="checkbox" id="a3"><span><span class="t">Color copies of passport pages with stamps and visas<span class="who">Both</span></span><span class="d">Shows travel to other countries and any official observations.</span></span></label></li>
+      <li><label><input type="checkbox" id="a4"><span><span class="t">Previous passports<span class="who">Both</span></span><span class="d">Extra travel history, if they have old passports.</span></span></label></li>
+    </ul>
+  </section>
+
+  <section class="c2">
+    <header><h2>2. Evidence of funds</h2><p>Juzar's own money, clearly accessible by him.</p></header>
+    <ul>
+      <li><label><input type="checkbox" id="b1"><span><span class="t">Bank statements<span class="who">Juzar</span></span><span class="d">Must show where the money comes from (salary credits). Nothing issued more than 1 year before the application date.</span></span></label></li>
+      <li><label><input type="checkbox" id="b2"><span><span class="t">Employer letter on company letterhead<span class="who">Juzar</span></span><span class="d">Role, salary, start date and length of employment, company contact details. Good idea to have it mention the approved leave dates too.</span></span></label></li>
+      <li><label><input type="checkbox" id="b3"><span><span class="t">Recent salary slips<span class="who">Juzar</span></span><span class="d">Backs up the salary shown in the letter and the bank statements.</span></span></label></li>
+      <li><label><input type="checkbox" id="b4"><span><span class="t">Sherebanu's bank statements or employer letter, if she has her own<span class="who">Sherebanu</span></span><span class="d">Skip if she relies fully on Juzar and the sponsor.</span></span></label></li>
+    </ul>
+  </section>
+
+  <section class="c3">
+    <header><h2>3. Support from the sponsor</h2><p>What the son/daughter in the UK is providing, and proof they can afford it.</p></header>
+    <ul>
+      <li><label><input type="checkbox" id="c1"><span><span class="t">Sponsor letter<span class="who">Sponsor</span></span><span class="d">What support is given (accommodation, food, travel, money), that it covers both parents, and how it is provided.</span></span></label></li>
+      <li><label><input type="checkbox" id="c2"><span><span class="t">Sponsor's bank statements<span class="who">Sponsor</span></span><span class="d">Shows they can support themselves, their dependants and the visitors.</span></span></label></li>
+      <li><label><input type="checkbox" id="c3"><span><span class="t">Sponsor's payslips or employment letter<span class="who">Sponsor</span></span><span class="d">Shows steady income behind the bank balance.</span></span></label></li>
+    </ul>
+  </section>
+
+  <section class="c4">
+    <header><h2>4. Relationship to the sponsor</h2><p>Proof that the sponsor is their child.</p></header>
+    <ul>
+      <li><label><input type="checkbox" id="d1"><span><span class="t">Sponsor's birth certificate naming both parents<span class="who">Sponsor</span></span><span class="d">If names are spelled differently across documents, add a passport page or other record that links them.</span></span></label></li>
+      <li><label><input type="checkbox" id="d2"><span><span class="t">Certified English translation, if the certificate is not in English<span class="who">Both</span></span><span class="d">Must carry the translator's confirmation of accuracy, date, full name, signature and contact details.</span></span></label></li>
+    </ul>
+  </section>
+
+  <section class="c5">
+    <header><h2>5. Sponsor's UK status and invitation</h2><p>Covers "not in breach of UK immigration laws" and the invitation checkbox.</p></header>
+    <ul>
+      <li><label><input type="checkbox" id="e1"><span><span class="t">Sponsor's passport photo page<span class="who">Sponsor</span></span><span class="d">Clear color scan.</span></span></label></li>
+      <li><label><input type="checkbox" id="e2"><span><span class="t">Sponsor's UK visa proof (eVisa share code or residence document)<span class="who">Sponsor</span></span><span class="d">Must be valid for the full dates of the visit.</span></span></label></li>
+      <li><label><input type="checkbox" id="e3"><span><span class="t">Invitation letter from the sponsor<span class="who">Sponsor</span></span><span class="d">Purpose of the visit, planned dates, the address they will stay at, and what they will do. Signed, with the sponsor's contact details. Can be combined with the sponsor letter in section 3.</span></span></label></li>
+    </ul>
+  </section>
+
+  <section class="no">
+    <header><h2>Do not send these</h2><p>The guide says these are not used as evidence.</p></header>
+    <ul>
+      <li>Bank statements older than 1 year</li>
+      <li>Credit card statements</li>
+      <li>Driving licenses</li>
+      <li>Educational certificates</li>
+      <li>Car ownership papers</li>
+      <li>Personal photographs</li>
+      <li>Notarial certificates</li>
+      <li>Business cards</li>
+      <li>Hotel bookings</li>
+      <li>Flight bookings</li>
+      <li>Photocopies of bank cards</li>
+      <li>Travel insurance</li>
+      <li>Sponsor's utility bills</li>
+      <li>Sponsor's council tax bills</li>
+    </ul>
+  </section>
+
+  <footer>
+    Based on the GOV.UK <a href="https://www.gov.uk/government/publications/visitor-visa-guide-to-supporting-documents/guide-to-supporting-documents-visiting-the-uk">guide to supporting documents for visiting the UK</a>. The guide's list is not exhaustive and sending these documents does not guarantee a visa. This is a personal checklist, not legal advice. Ticks are saved in this browser only.
+  </footer>
+</main>
+<script>
+  var KEY = 'uk-visa-todo-juzar';
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('input[type=checkbox]'));
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) {}
+  var calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var COLORS = ['#9CC9A8','#F6E3A1','#F7C9B0','#CFC3EE','#BFDDF2','#D9533B'];
+  function burst(x, y, n) {
+    if (calm || !document.body.animate) return;
+    for (var i = 0; i < n; i++) {
+      var b = document.createElement('span');
+      b.className = 'bit';
+      b.style.left = x + 'px'; b.style.top = y + 'px';
+      b.style.background = COLORS[i % COLORS.length];
+      document.body.appendChild(b);
+      var a = Math.random() * Math.PI * 2, d = 40 + Math.random() * 90;
+      b.animate([
+        { transform: 'translate(0,0) rotate(0)', opacity: 1 },
+        { transform: 'translate(' + Math.cos(a) * d + 'px,' + (Math.sin(a) * d + 60) + 'px) rotate(' + (Math.random() * 720 - 360) + 'deg)', opacity: 0 }
+      ], { duration: 700 + Math.random() * 500, easing: 'cubic-bezier(.2,.7,.3,1)' }).onfinish = (function (el) { return function () { el.remove(); }; })(b);
+    }
+  }
+  function cheer(p) {
+    if (p === 0) return 'Let\'s go!';
+    if (p < 0.4) return 'Nice start 👏';
+    if (p < 0.75) return 'Halfway there 💪';
+    if (p < 1) return 'Almost done 🔥';
+    return 'All set. London calling! 🎉';
+  }
+  function render() {
+    var done = boxes.filter(function (b) { return b.checked; }).length;
+    document.getElementById('count').textContent = done + ' of ' + boxes.length + ' done';
+    document.getElementById('cheer').textContent = cheer(done / boxes.length);
+    document.getElementById('fill').style.width = (done / boxes.length * 100) + '%';
+    Array.prototype.forEach.call(document.querySelectorAll('section'), function (s) {
+      var bs = s.querySelectorAll('input[type=checkbox]');
+      s.classList.toggle('done', bs.length > 0 && s.querySelectorAll('input:checked').length === bs.length);
+    });
+    return done;
+  }
+  function save() {
+    boxes.forEach(function (b) { state[b.id] = b.checked; });
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+    render();
+  }
+  boxes.forEach(function (b) { b.checked = !!state[b.id]; b.addEventListener('change', function () {
+      save();
+      if (!b.checked) return;
+      var r = b.getBoundingClientRect();
+      burst(r.left + 10, r.top + 10, 14);
+      if (boxes.every(function (x) { return x.checked; })) { for (var k = 0; k < 6; k++) burst(innerWidth * (0.15 + 0.14 * k), innerHeight * 0.3, 24); }
+    });
+  });
+  document.getElementById('reset').addEventListener('click', function () {
+    boxes.forEach(function (b) { b.checked = false; }); save();
+  });
+  render();
+</script>
+</body>
+</html>
